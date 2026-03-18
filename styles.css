@@ -1,0 +1,123 @@
+:root {
+  --bg: #f8f8f6;
+  --surface: #ffffff;
+  --text: #1d2730;
+  --muted: #5d6872;
+  --accent: #8b6f47;
+  --line: #dfdfd8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Public Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.wrap {
+  width: min(1000px, 92vw);
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+}
+
+.hero {
+  padding: 3rem 0 2rem;
+}
+
+.sub {
+  color: var(--accent);
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+}
+
+h1,
+h2 {
+  font-family: "EB Garamond", serif;
+}
+
+h1 {
+  margin: 0.4rem 0 0.8rem;
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  max-width: 13ch;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 58ch;
+}
+
+.practice {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.practice article,
+.team,
+.contact {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.practice p,
+.team p {
+  color: var(--muted);
+}
+
+.team,
+.contact {
+  margin-top: 0.8rem;
+}
+
+.contact a {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+footer {
+  color: var(--muted);
+  padding: 1.8rem 0;
+}
+
+@media (max-width: 760px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+
+  .practice {
+    grid-template-columns: 1fr;
+  }
+}
