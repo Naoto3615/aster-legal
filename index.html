@@ -10,40 +10,84 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="wrap header">
-      <a class="brand" href="#">Aster Legal</a>
-      <nav>
-        <a href="#practice">取扱分野</a>
-        <a href="#team">弁護士紹介</a>
-        <a href="#contact">相談予約</a>
+    <div class="bg-layer"></div>
+    <header class="site-header container">
+      <a class="brand" href="#top">Aster Legal</a>
+      <button class="menu-toggle" aria-expanded="false" aria-label="メニュー">☰</button>
+      <nav class="nav-links">
+        <a href="#practice">Practice</a>
+        <a href="#approach">Approach</a>
+        <a href="#voices">Voices</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
-    <main class="wrap">
-      <section class="hero">
-        <p class="sub">TRUSTED BUSINESS COUNSEL</p>
-        <h1>成長フェーズの企業法務を、伴走型で支援。</h1>
-        <p>契約、労務、資金調達、知財まで。リスクを減らし、意思決定を速める法務体制を構築します。</p>
+    <main id="top" class="container">
+      <section class="hero reveal">
+        <span class="badge">TRUSTED BUSINESS COUNSEL</span>
+        <div class="hero-grid">
+          <div>
+            <h1>成長フェーズの企業法務を、伴走型で支援。</h1>
+            <p class="lead">契約、労務、資金調達、知財まで。経営判断のスピードを落とさない法務体制を設計し、実務まで支援します。</p>
+            <div class="hero-actions">
+              <a class="btn primary" href="#contact">初回相談を予約</a>
+              <a class="btn ghost" href="#practice">取扱分野を見る</a>
+            </div>
+          </div>
+          <aside class="hero-stats">
+            <article><strong data-count="220" data-suffix="社">0社</strong><span>支援企業数</span></article>
+            <article><strong data-count="48" data-suffix="時間">0時間</strong><span>緊急案件への初動</span></article>
+            <article><strong data-count="96" data-suffix="%">0%</strong><span>継続顧問契約率</span></article>
+          </aside>
+        </div>
       </section>
 
-      <section class="practice" id="practice">
-        <article><h2>契約法務</h2><p>レビュー、交渉、条項設計を実務目線で支援。</p></article>
-        <article><h2>労務対応</h2><p>就業規則整備、トラブル予防、初動対応。</p></article>
-        <article><h2>スタートアップ法務</h2><p>資本政策、株主間契約、規制整理に対応。</p></article>
+      <section class="section reveal" id="practice">
+        <div class="section-head"><span class="eyebrow">PRACTICE AREAS</span><h2>取扱分野</h2></div>
+        <div class="card-grid three">
+          <article class="card"><h3>契約法務</h3><p>レビュー、交渉、テンプレート整備を一気通貫で支援。</p><strong>継続支援</strong></article>
+          <article class="card"><h3>労務対応</h3><p>予防法務からトラブル初動まで、実務に即した対応。</p><strong>迅速対応</strong></article>
+          <article class="card"><h3>スタートアップ法務</h3><p>資本政策、株主間契約、規制対応まで整理。</p><strong>成長支援</strong></article>
+        </div>
       </section>
 
-      <section class="team" id="team">
-        <h2>Team</h2>
-        <p>企業法務に特化した弁護士3名体制で、迅速かつ継続的に支援します。</p>
+      <section class="section reveal" id="approach">
+        <div class="section-head"><span class="eyebrow">APPROACH</span><h2>支援の進め方</h2></div>
+        <div class="process-list">
+          <article><h3>現状把握</h3><p>契約・規程・運用フローを棚卸しし、優先度を定義。</p></article>
+          <article><h3>実務実装</h3><p>現場で使える運用ルールに落とし込み、定着まで支援。</p></article>
+          <article><h3>継続改善</h3><p>月次レビューでリスクを更新し、体制を最適化。</p></article>
+        </div>
       </section>
 
-      <section class="contact" id="contact">
-        <h2>初回相談予約</h2>
-        <a href="mailto:contact@aster-legal.jp">contact@aster-legal.jp</a>
+      <section class="section reveal" id="voices">
+        <div class="section-head"><span class="eyebrow">CLIENT VOICES</span><h2>クライアントの声</h2></div>
+        <div class="review-grid">
+          <blockquote>「意思決定が早くなり、事業サイドとの連携が改善しました。」</blockquote>
+          <blockquote>「契約交渉の方針が明確になり、社内説明がしやすくなりました。」</blockquote>
+          <blockquote>「顧問弁護士として、日常業務に近い距離で伴走してもらえます。」</blockquote>
+        </div>
+      </section>
+
+      <section class="section reveal" id="contact">
+        <div class="contact-panel">
+          <div>
+            <span class="eyebrow">CONTACT</span>
+            <h2>初回相談のご予約</h2>
+            <p>事業フェーズと課題を送信ください。必要な論点を整理して初回面談をご案内します。</p>
+          </div>
+          <form class="contact-form">
+            <input type="text" placeholder="会社名 / お名前" required />
+            <input type="email" placeholder="メールアドレス" required />
+            <textarea placeholder="相談内容"></textarea>
+            <button type="submit" class="btn primary">送信する</button>
+          </form>
+        </div>
       </section>
     </main>
 
-    <footer class="wrap">© <span id="year"></span> Aster Legal Partners</footer>
+    <footer class="container">© <span id="year"></span> Aster Legal Partners</footer>
+    <div class="toast" id="toast">お問い合わせありがとうございます。担当弁護士より連絡します。</div>
     <script src="app.js"></script>
   </body>
 </html>
